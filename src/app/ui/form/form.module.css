@@ -1,0 +1,33 @@
+.input,
+.textarea {
+  background-color: transparent;
+  border: none;
+  outline: None;
+  color: inherit;
+}
+
+.textarea {
+  resize: none;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+}
+
+/* input[name="name"]:focus {
+  border-bottom: 1px solid #94acd4;
+} */
+
+.textarea:disabled {
+  opacity: 0.5;
+}
+
+.textarea::placeholder,
+.input::placeholder {
+  color: rgba(210, 210, 210);
+}
+
+.control-error p {
+  font-size: 12px;
+  color: turquoise;
+  text-transform: none;
+}
