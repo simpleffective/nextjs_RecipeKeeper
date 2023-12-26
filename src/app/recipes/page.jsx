@@ -6,7 +6,7 @@ export default function RecipesPage() {
     <>
       <h1>Recipe Keeper</h1>
       <ControlBar />
-      <RecipeGrid recipes={[]} />
+      <RecipeGrid />
     </>
   );
 }

@@ -1,10 +1,11 @@
+"use client";
 import Reply from "@/app/ui/Reply";
 import Input from "@/app/ui/form/Input";
 import { useState, useRef, useEffect } from "react";
 import styles from "@/app/ui/RepliesSection.module.css";
 import replyStyles from "@/app/ui/Reply.module.css";
 
-export default function RepliesSection({ replies, onAdd }) {
+export default async function RepliesSection({ replies, onAdd }) {
   const replyRef = useRef();
   const [replyVisible, setReplyVisible] = useState(false);
 
@@ -42,7 +43,12 @@ export default function RepliesSection({ replies, onAdd }) {
       </div>
       <div className={styles.replies}>
         {replies.map((reply) => (
-          <Reply key={reply.id} {...reply} />
+          <Reply
+            key={reply.reply_id}
+            replier={reply.display_name}
+            replier_image={reply.image_url}
+            reply={reply.reply}
+          />
         ))}
       </div>
       {replyVisible && (

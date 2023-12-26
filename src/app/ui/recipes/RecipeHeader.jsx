@@ -1,12 +1,24 @@
 import styles from "@/app/ui/recipes/Recipe.module.css";
 import Image from "next/image";
 
-export default function RecipeHeader({ image, name, count, description }) {
+export default function RecipeHeader({
+  name,
+  user,
+  image_url,
+  description,
+  count,
+}) {
   const displayCount = count !== undefined && count > 0;
   return (
     <div className={styles.header}>
       <div className={styles.imageWrap}>
-        <Image className={styles.image} src={image} alt="" />
+        <Image
+          className={styles.image}
+          src={image_url}
+          alt=""
+          width={600}
+          height={600}
+        />
       </div>
       <div className={styles.summary}>
         <h1 className={styles.name}>{name}</h1>
