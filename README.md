@@ -1,3 +1,14 @@
+TODO:
+* organize folder structure
+* refactor data fetching & props
+* input validation + connect db additions
+* implement recipe update
+* Google Auth + user sessions & permissions + login page
+* user card (settings etc.)
+* make pretty
+* bonus: see users logged in ATM, group chat
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
